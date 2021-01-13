@@ -1578,6 +1578,7 @@ code {padding:2px 4px;font-size:90%;font-weight:bold;color:#c7254e;background-co
 .hld__excel-body {background:#fff !important;}
 .hld__excel-header, .hld__excel-footer, .hld__excel-setting {display: none;}
 .hld__excel-body #mainmenu,.hld__excel-body .catenew,.hld__excel-body #toptopics,.hld__excel-body #m_pbtntop,.hld__excel-body #m_fopts,.hld__excel-body #b_nav,.hld__excel-body #fast_post_c,.hld__excel-body #custombg,.hld__excel-body #m_threads th,.hld__excel-body #m_posts th,.hld__excel-body .r_container,.hld__excel-body #footer,.hld__excel-body .clickextend {display:none !important;}
+.hld__excel-body #toptopics + span {display:none;}
 .hld__excel-body #mmc {margin-top:195px;margin-bottom:35px;}
 .hld__excel-body .postBtnPos > div, .hld__excel-body .postBtnPos .stdbtn a {background:#fff !important;border-color:#bbb;}
 .hld__excel-body .hld__excel-div,.hld__excel-body .hld__excel-setting {display:block;}
