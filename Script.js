@@ -16,6 +16,16 @@
 (function () {
     'use strict';
 
+    // 自动跳过需要跳转的广告页
+    const currentHref = window.location.href;
+    if (~currentHref.indexOf('adpage')) {
+      const urlAfterQuestionMark = currentHref.substr(currentHref.indexOf('?'));
+      const trulyHrefIndex = urlAfterQuestionMark.indexOf('http');
+      if (~trulyHrefIndex) {
+        window.location.href = urlAfterQuestionMark.substr(trulyHrefIndex);
+      }
+    }
+
     const defaultShortcut = [81, 87, 69, 37, 39, 82, 84, 66]
     let setting = {
         hideAvatar: true,
@@ -1632,6 +1642,10 @@ code {padding:2px 4px;font-size:90%;font-weight:bold;color:#c7254e;background-co
 .hld__excel-body #m_posts .postbox {border:none !important;}
 .hld__excel-body #m_posts .postbox + span {display:none;}
 .hld__excel-body.hld__reply-fixed #postbbtm {position:fixed;right:30px;top:75px;z-index:999;border-radius: 10px;overflow: hidden;}
+.hld__excel-body .single_ttip2 > div > div {background-color:white;color:black;border-color:lightgray;}
+.hld__excel-body .single_ttip2 > div > div > a {background-color:white;color:black;border-color:lightgray;}
+.hld__excel-body .single_ttip2 > div > div > a:hover {background-color:#d3d3d3;color:#fff;}
+.hld__excel-body .single_ttip2 > div button {background-color:#efefef;border-color:#76767650;border-width:1px;border-style:outset;}
 .hld__flex{display:flex;}
 #hld__noti_container {position:fixed;top:10px;left:10px;}
 .hld__noti-msg {display:none;padding:10px 20px;font-size:14px;font-weight:bold;color:#fff;margin-bottom:10px;background:rgba(0,0,0,0.6);border-radius:10px;cursor:pointer;}
